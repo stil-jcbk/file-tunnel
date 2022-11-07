@@ -1,0 +1,99 @@
+#notification{
+    left: 50%;
+    top: -150px;
+    transform: translateX(-50%);
+    position: absolute;
+    border-radius: 25px;
+    display: inline-flex;
+    width: 425px;
+    height: 125px;
+    background-color: rgba(255, 255, 255, 0.07);
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #ff0f2f;
+}
+
+.notiShow{
+    animation: notiShow 1s ease forwards;
+}
+
+.notiHide{
+    animation: notiHide 1s ease forwards;
+}
+
+/* .notification-cont{
+    display: inline-flex;
+    width: 500px;
+    height: max-content;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    justify-content: center;
+} */
+
+#notification img{
+    border-radius: 25px;
+    width: 75px;
+    height: 75px;
+    border: 3px solid #ff0f2f;
+    object-fit: cover;
+    user-select: none;
+    -webkit-user-drag: none
+}
+
+#notification p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
+    color: white;
+    margin-right: 175px;
+    position: relative;
+    user-select: none;
+    left: 10px;
+}
+
+#close{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
+    color: white;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    transition: transform .2s ease, filter .2s ease;
+    cursor: pointer;
+    user-select: none;
+}
+
+#close:hover{
+    color: #ff0f2f;
+    transform: scale(150%);
+    filter: drop-shadow(0 0 5px #ff0f2f);
+}
+
+#chart-cont{
+    margin-top: 175px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid #ff0f2f;
+    border-radius: 25px;
+    width: 60vw;
+}
+
+@media only screen and (max-width: 600px) {
+    #chart-cont{
+        width: 90%;
+    }
+  }
+
+@keyframes notiShow {
+    0%{top: -150px}
+    100%{top: 25px;}
+}
+
+@keyframes notiHide {
+    0%{top: 25px}
+    100%{top: -150px;}
+}
