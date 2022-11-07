@@ -1,12 +1,9 @@
-const sleep = ms => new Promise(r => setTimeout(r, ms));
 const express = require('express');
 const path = require('path');
 var busboy = require('connect-busboy')
-const { port } = require('./config.json');
 var fs = require('fs');
 const qr = require('qrcode');
 const fp = require('find-free-port');
-const { json, response } = require('express');
 const extend = require('util')._extend;
 
 const app = express();
